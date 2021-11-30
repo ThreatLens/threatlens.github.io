@@ -11335,6 +11335,41 @@ textarea.form-control-lg {
   display: inline-block;
   font-size: 4rem;
 }
+@keyframes placeHolderShimmer {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: fit-content;
+  }
+}
+#subtitle-left {
+  display: inline-block;
+  animation: placeHolderShimmer 1s cubic-bezier(.4,.0,.1,1) forwards;
+  width: 0px;
+  /*transition: background-size 1s ease-in;*/
+  /*background-size: 0px;*/
+  
+  background: red; /*linear-gradient(to right, red 100%, transparent 0%) no-repeat;*/
+  color: white;
+  padding: 2px 5px 2px 5px;
+  font-weight: bold;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#subtitle-right {
+  display: inline-block;
+  animation: placeHolderShimmer 1s cubic-bezier(.4,.0,.1,1) 1s forwards;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 50px;
+  background: yellow; /*linear-gradient(to right, yellow 100%, transparent 0%) no-repeat;*/
+  /*background-size: 0%;*/
+  color: black;
+  padding: 2px 5px 2px 5px;
+}
 @font-face {
   font-family: 'RacingSansOne';
   src: url("../assets/RacingSansOne-Regular.ttf");

@@ -22,11 +22,11 @@ tabInit : () -> (Tab, Cmd.Cmd Tab)
 tabInit _ = (Identify, Cmd.none)
 
 tabView tab =
-    let link t = let tabName = Debug.toString t
-                 in a ([ href (S.append "#" (S.toLower tabName)), onClick t ] ++ (if tab == t then [ class "tab-link-selected" ] else []))
-                      [ text tabName ]
+    let link (t, noun) = let tabName = Debug.toString t
+                 in a ([ href ("#" ++ S.toLower tabName), onClick t ] ++ (if tab == t then [ class "tab-link-selected" ] else []))
+                      [ text (tabName ++ " " ++ noun) ]
     in div [ class "tabs" ]
-           [ div [ class "tab-links" ] (map link [Identify, Compare, Execute])
+           [ div [ class "tab-links" ] (map link [(Identify, "Threats"), (Compare, "Technologies"), (Execute, "Mitigations")])
            , div [ class "tab-contents" ] [ tabContentView tab ] ]
 
 tabContentView tab =
@@ -35,7 +35,8 @@ tabContentView tab =
         Identify -> 
             div []
                 [ h3 []
-                     [ text "Uncover security holes hiding in your IoT infrastructure." ] ]
+                     [ text "Uncover security holes hiding in your IoT infrastructure." ]
+                , ]
         -- "Compare"
         Compare ->
             div []

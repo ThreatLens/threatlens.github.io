@@ -5162,7 +5162,6 @@ var $author$project$Main$tabUpdate = F2(
 var $author$project$Main$Compare = {$: 'Compare'};
 var $author$project$Main$Execute = {$: 'Execute'};
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $elm$core$String$append = _String_append;
 var $elm$virtual_dom$VirtualDom$property = F2(
 	function (key, value) {
 		return A2(
@@ -5261,7 +5260,9 @@ var $author$project$Main$tabContentView = function (tab) {
 var $elm$core$String$toLower = _String_toLower;
 var $elm$core$Debug$toString = _Debug_toString;
 var $author$project$Main$tabView = function (tab) {
-	var link = function (t) {
+	var link = function (_v0) {
+		var t = _v0.a;
+		var noun = _v0.b;
 		var tabName = $elm$core$Debug$toString(t);
 		return A2(
 			$elm$html$Html$a,
@@ -5269,10 +5270,7 @@ var $author$project$Main$tabView = function (tab) {
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$href(
-						A2(
-							$elm$core$String$append,
-							'#',
-							$elm$core$String$toLower(tabName))),
+						'#' + $elm$core$String$toLower(tabName)),
 						$elm$html$Html$Events$onClick(t)
 					]),
 				_Utils_eq(tab, t) ? _List_fromArray(
@@ -5281,7 +5279,7 @@ var $author$project$Main$tabView = function (tab) {
 					]) : _List_Nil),
 			_List_fromArray(
 				[
-					$elm$html$Html$text(tabName)
+					$elm$html$Html$text(tabName + (' ' + noun))
 				]));
 	};
 	return A2(
@@ -5302,7 +5300,11 @@ var $author$project$Main$tabView = function (tab) {
 					$elm$core$List$map,
 					link,
 					_List_fromArray(
-						[$author$project$Main$Identify, $author$project$Main$Compare, $author$project$Main$Execute]))),
+						[
+							_Utils_Tuple2($author$project$Main$Identify, 'Threats'),
+							_Utils_Tuple2($author$project$Main$Compare, 'Technologies'),
+							_Utils_Tuple2($author$project$Main$Execute, 'Mitigations')
+						]))),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(

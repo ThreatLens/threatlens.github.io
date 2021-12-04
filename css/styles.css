@@ -12293,8 +12293,16 @@ ul.device-issues {
   list-style-type: none;
 }
 
+ul.device-issues .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 ul.device-issues li::before {
-  content: "";
+  /*content: "";*/
 }
 
 .fade-block {
@@ -12319,7 +12327,10 @@ ul.device-issues li::before {
   text-align: left;
   background: #141414;
   border-radius: 10px;
-  padding: 15px;
+  padding: 15px 30px 15px 15px;
+  margin-top: 30px;
+  border: 1px solid #383838;
+  box-shadow: inset 0px 0px 4px 2px #282828;
 }
 
 /*.page-look {
@@ -12327,3 +12338,74 @@ ul.device-issues li::before {
     color: black;
     box-shadow: 0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15);
 }*/
+/*
+ul {
+  margin: auto;
+  height: 10px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+  border-radius: 100%;
+}*/
+
+/*li:nth-child(-n+5) {
+  background: rgba(255,255,255,1);
+  box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                    0px 0px 10px 2px rgba(0,255,135,1);
+}
+
+li:nth-child(n+6) {
+  box-shadow: inset 0px 0px 10px 1px rgba(0,255,182,0.15),
+                    0px 0px 10px rgba(0,255,182,0.1);
+}*/
+
+li.critical-issue .dot {
+  box-shadow: inset 0px 0px 10px 2px #FF5161,
+                      0px 0px 10px 2px rgba(211,3,2,0.4);
+  animation: pulseCritical 0.75s alternate infinite;
+}
+
+@keyframes pulseCritical {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px #FF5161,
+                      0px 0px 5px 2px rgba(211,3,2,0.4);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px #FF5161,
+                      0px 0px 15px 2.5px rgba(211,3,2,1);
+  }
+}
+
+li.warning-issue .dot {
+  box-shadow: inset 0px 0px 10px 2px #ffdb4e,
+                      0px 0px 10px 2px rgba(180,133,5,0.4);
+  /*animation: pulseWarning 0.75s alternate infinite;*/
+}
+
+@keyframes pulseWarning {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px #ffdb4e,
+                      0px 0px 5px 2px rgba(180,133,5,0.4);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px #ffdb4e,
+                      0px 0px 15px 2.5px rgba(180,133,5,1);
+  }
+}

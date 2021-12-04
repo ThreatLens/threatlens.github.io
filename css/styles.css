@@ -12266,11 +12266,14 @@ textarea.form-control-lg {
   font-size: 1.5em;
 }
 
+.device-top-line {
+  margin-left: 10px;
+}
 
 .device-rating {
   display: inline-block;
-  height: 75px;
-  width: 75px;
+  height: 45px;
+  width: 45px;
   text-align: center;
   color: #fff;
   vertical-align: middle;
@@ -12286,10 +12289,12 @@ textarea.form-control-lg {
   display: inline-block;
   font-size: 1.6em;
   vertical-align: middle;
+  margin-left: 5px;
 }
 
 ul.device-issues {
   margin-left: 45px;
+  margin-bottom: 0;
   list-style-type: none;
 }
 
@@ -12322,16 +12327,16 @@ ul.device-issues li::before {
   color: #fff;
 }
 
-#example {
+.example {
   text-align: center;
 }
 
-#initial-device {
+.device {
   display: inline-block;
   text-align: left;
   background: #141414;
   border-radius: 10px;
-  padding: 15px 30px 15px 15px;
+  padding: 20px 30px 25px 15px;
   margin-top: 30px;
   border: 1px solid #383838;
   box-shadow: inset 0px 0px 4px 2px #282828;
@@ -12378,15 +12383,15 @@ li:nth-child(n+6) {
 
 li.critical-issue .dot {
   box-shadow: inset 0px 0px 10px 2px #FF5161,
-                      0px 0px 10px 2px rgba(211,3,2,0.4);
-  animation: pulseCritical 0.75s alternate infinite;
+                      0px 0px 10px 2px rgba(211,3,2,0.1);
+  animation: pulseCritical 0.75s alternate  linear infinite;
 }
 
 @keyframes pulseCritical {
   0% {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
     box-shadow: inset 0px 0px 10px 2px #FF5161,
-                      0px 0px 5px 2px rgba(211,3,2,0.4);
+                      0px 0px 5px 2px rgba(211,3,2,0.1);
   }
   100% {
     background: rgba(255,255,255,1);
@@ -12396,20 +12401,158 @@ li.critical-issue .dot {
 }
 
 li.warning-issue .dot {
-  box-shadow: inset 0px 0px 10px 2px #ffdb4e,
-                      0px 0px 10px 2px rgba(180,133,5,0.4);
-  /*animation: pulseWarning 0.75s alternate infinite;*/
+  box-shadow: inset 0px 0px 8px 3px #ffdb4e,
+                      0px 0px 8px 2px rgba(180,133,5,0.3);
 }
 
-@keyframes pulseWarning {
+
+li.non-issue .dot {
+  background: rgba(255,255,255,0.1);
+  box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+  animation: flicker-2 2s linear 1s forwards;
+}
+
+@keyframes pulseNon {
   0% {
-    background: rgba(255,255,255,0.3);
-    box-shadow: inset 0px 0px 10px 2px #ffdb4e,
-                      0px 0px 5px 2px rgba(180,133,5,0.4);
+    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+  }
+
+  60% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0.6),
+                      0px 0px 8px 2px rgba(2,196,53,0.2);
+  }
+
+  75% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0.5),
+                      0px 0px 8px 2px rgba(2,196,53,0.15);
+  }
+
+  100% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  3% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  6% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  7% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  8% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  9% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  10% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  20% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  50% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  99% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
   }
   100% {
-    background: rgba(255,255,255,1);
-    box-shadow: inset 0px 0px 10px 2px #ffdb4e,
-                      0px 0px 15px 2.5px rgba(180,133,5,1);
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+}
+
+@keyframes flicker-2 {
+  0% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  3% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  6% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  7% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  8% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  9% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  10% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,0),
+                0px 0px 8px 2px rgba(2,196,53,0);
+  }
+  20% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+  100% {
+    box-shadow: inset 0px 0px 8px 3px rgba(0,254,173,1),
+                      0px 0px 8px 2px rgba(2,196,53,0.3);
+  }
+}
+
+.second-device {
+  animation: expand-down 0.75s linear forwards;
+  overflow: hidden;
+  max-height: 0px;
+}
+
+.second-device .device-top-line {
+  opacity: 0%;
+  animation: visbilize 1s linear 0.55s forwards;
+}
+
+.second-device.third .device-top-line {
+  animation: visbilize 1s linear 0.85s forwards;
+}
+
+
+.second-device ul {
+  display: none;
+}
+
+@keyframes visbilize {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes expand-down {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 45px;
   }
 }

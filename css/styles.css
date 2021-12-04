@@ -12301,6 +12301,10 @@ ul.device-issues .dot {
   margin-right: 10px;
 }
 
+ul.device-issues li span {
+  vertical-align: middle;
+}
+
 ul.device-issues li::before {
   /*content: "";*/
 }

@@ -1,0 +1,241 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    meta content="" name="description" /
+    meta content="" name="author" /
+    title ThreatLens - Precision IoT Threat Analysis Services
+    /! Favicon
+    link href="assets/favicon.ico" rel="icon" type="image/x-icon" /
+    /! Bootstrap icons
+    link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" /
+    /! Core theme CSS (includes Bootstrap)
+    link href="css/styles.css" rel="stylesheet" /
+  body
+    #header
+      #particles-js
+      /! Responsive navbar
+      nav#navbar.navbar.navbar-expand-lg.navbar-dark
+        .container.px-5
+          a.navbar-brand href="/" 
+            span.threat-text Threat
+            span.lens-text Lens
+          button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+              li.nav-item
+                a.nav-link.active aria-current="page" href="#!"  Home
+              li.nav-item
+                a.nav-link href="#!"  About
+              li.nav-item
+                a.nav-link href="#!"  Contact
+              li.nav-item
+                a.nav-link href="#!"  Services
+      /! Header
+      header.pt-5
+        .container.px-5
+          .row.gx-5.justify-content-center
+            .col-lg-11
+              .text-center.my-4
+                h1#main-title.display-5.d-block.fw-bolder.text-white.mb-5 Defend against novel threats
+                p.anim-typewriter.align-middle.d-inline-block.fs-4
+                  span.white-on-red.py-3
+                    span.px-2 Stop
+                  span.black-on-yellow.py-3
+                    span.px-2 cyber crime on every front
+                span.blinking-cursor
+                .mt-5.d-grid.gap-3.d-sm-flex.justify-content-sm-center
+                  a.btn.btn-outline-light.btn-lg.px-4 href="#!"  Learn More
+        .fade-block
+    /! Features section
+    section#features.py-5.border-bottom
+      .container.px-5
+        .row.gx-5
+          #elm-tabs.tabs
+        .example.page-look
+          #initial-device.device
+            .device-top-line
+              svg.device-rating height="45px" viewbox=("0 0 87 100") width="45px" 
+                g
+                  g
+                    path d=("M 86.3556),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#e20c0c;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    path d=("M 0),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#bc0d0d;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    path d=("M 86.3556),25.1764 43.1777,0 0,25.1764 43.1777,50.1321 86.3556,25.1764" style="fill:#ff2424;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    text fill="#fff" font-family="Inter" font-size="2em" font-weight="bold" style=("filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 0.4));") x="22" y="74"  3
+              .device-name Linksys EA6350
+            ul.device-issues
+              li.critical-issue
+                .dot
+                span Known Remote Code Execution Exploit
+              li.warning-issue
+                .dot
+                span Outdated Kernel
+              li.warning-issue
+                .dot
+                span No Stack Canaries
+        .example.page-look
+          #compare-devices.device
+            .device-top-line
+              svg.device-rating height="45px" viewbox=("0 0 87 100") width="45px" 
+                g
+                  g
+                    path d=("M 86.3556),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#e20c0c;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    path d=("M 0),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#bc0d0d;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    path d=("M 86.3556),25.1764 43.1777,0 0,25.1764 43.1777,50.1321 86.3556,25.1764" style="fill:#ff2424;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                    text fill="#fff" font-family="Inter" font-size="2em" font-weight="bold" style=("filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 0.4));") x="22" y="74"  3
+              .device-name Linksys EA6350
+            ul.device-issues
+              li.critical-issue
+                .dot
+                span Known Remote Code Execution Exploit
+              li.warning-issue
+                .dot
+                span Outdated Kernel
+              li.warning-issue
+                .dot
+                span No Stack Canaries
+            .second-device
+              .device-top-line
+                svg.device-rating height="45px" viewbox=("0 0 87 100") width="45px" 
+                  g
+                    g
+                      path d=("M 86.3556),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#249111;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      path d=("M 0),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#26aa13;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      path d=("M 86.3556),25.1764 43.1777,0 0,25.1764 43.1777,50.1321 86.3556,25.1764" style="fill:#3ac022;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      text fill="#fff" font-family="Inter" font-size="2em" font-weight="bold" style=("filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 0.4));") x="22" y="74"  9
+                .device-name Belkin D5200
+              ul.device-issues
+                li.non-issue
+                  .dot
+                  span No Known Exploits
+                li.non-issue
+                  .dot
+                  span Updated Kernel
+                li.non-issue
+                  .dot
+                  span Stack Canaries and ASLR Enabled
+            .second-device.third
+              .device-top-line
+                svg.device-rating height="45px" viewbox=("0 0 87 100") width="45px" 
+                  g
+                    g
+                      path d=("M 86.3556),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#249111;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      path d=("M 0),75.0882 V 25.1764 L 43.1777,50.1321 V 100" style="fill:#26aa13;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      path d=("M 86.3556),25.1764 43.1777,0 0,25.1764 43.1777,50.1321 86.3556,25.1764" style="fill:#3ac022;fill-opacity:1;fill-rule:nonzero;stroke:none" 
+                      text fill="#fff" font-family="Inter" font-size="2em" font-weight="bold" style=("filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 0.4));") x="22" y="74"  9
+                .device-name Belkin X5000
+              ul.device-issues
+                li.non-issue
+                  .dot
+                  span No Known Exploits
+                li.non-issue
+                  .dot
+                  span Updated Kernel
+                li.non-issue
+                  .dot
+                  span Stack Canaries and ASLR Enabled
+        /!
+          | <div class="row gx-5"
+          | <div class="col-lg-4 mb-5 mb-lg-0"
+          | <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div
+          | <h2 class="h4 fw-bolder">Identify</h2
+          | <p>Uncover security holes hiding in your IoT infrastructure.</p
+          | <a class="text-decoration-none" href="#!"
+          | Call to action
+          | <i class="bi bi-arrow-right"></i
+          | </a
+          | </div
+          | <div class="col-lg-4 mb-5 mb-lg-0"
+          | <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div
+          | <h2 class="h4 fw-bolder">Compare</h2
+          | <p>Contrast remedial strategies to lower risk exposure.</p
+          | <a class="text-decoration-none" href="#!"
+          | Call to action
+          | <i class="bi bi-arrow-right"></i
+          | </a
+          | </div
+          | <div class="col-lg-4"
+          | <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div
+          | <h2 class="h4 fw-bolder">Execute</h2
+          | <p>Correct your network and device deployments with surgical precision.</p
+          | <a class="text-decoration-none" href="#!"
+          | Call to action
+          | <i class="bi bi-arrow-right"></i
+          | </a
+          | </div
+          | </div
+    /! Contact section
+    section.bg-light.py-5
+      .container.px-5.my-5.px-5
+        .text-center.mb-5
+          .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+            i.bi.bi-envelope
+          h2.fw-bolder Get in touch
+          p.lead.mb-0 We'd love to hear from you
+        .row.gx-5.justify-content-center
+          .col-lg-6
+            /! * * * * * * * * * * * * * * *
+            /! * * SB Forms Contact Form * *
+            /! * * * * * * * * * * * * * * *
+            /! This form is pre-integrated with SB Forms.
+            /! To make this form functional, sign up at
+            /! https://startbootstrap.com/solution/contact-forms
+            /! to get an API token!
+            form#contactForm data-sb-form-api-token="API_TOKEN" 
+              /! Name input
+              .form-floating.mb-3
+                input#name.form-control data-sb-validations="required" placeholder=("Enter your name...") type="text" /
+                label for="name"  Full name
+                .invalid-feedback data-sb-feedback="name:required"  A name is required.
+              /! Email address input
+              .form-floating.mb-3
+                input#email.form-control data-sb-validations="required,email" placeholder="name@example.com" type="email" /
+                label for="email"  Email address
+                .invalid-feedback data-sb-feedback="email:required"  An email is required.
+                .invalid-feedback data-sb-feedback="email:email"  Email is not valid.
+              /! Phone number input
+              .form-floating.mb-3
+                input#phone.form-control data-sb-validations="required" placeholder=("(123) 456-7890") type="tel" /
+                label for="phone"  Phone number
+                .invalid-feedback data-sb-feedback="phone:required"  A phone number is required.
+              /! Message input
+              .form-floating.mb-3
+                textarea#message.form-control data-sb-validations="required" placeholder=("Enter your message here...") style=("height: 10rem") type="text" 
+                label for="message"  Message
+                .invalid-feedback data-sb-feedback="message:required"  A message is required.
+              /! Submit success message
+              /!
+              /! This is what your users will see when the form
+              /! has successfully submitted
+              #submitSuccessMessage.d-none
+                .text-center.mb-3
+                  .fw-bolder Form submission successful!
+                  | To activate this form, sign up at
+                  br/
+                  a href="https://startbootstrap.com/solution/contact-forms"  https://startbootstrap.com/solution/contact-forms
+              /! Submit error message
+              /!
+              /! This is what your users will see when there is
+              /! an error submitting the form
+              #submitErrorMessage.d-none
+                .text-center.text-danger.mb-3 Error sending message!
+              /! Submit Button
+              .d-grid
+                button#submitButton.btn.btn-primary.btn-lg.disabled type="submit"  Submit
+    /! Footer
+    footer.py-5.bg-dark
+      .container.px-5
+        p.m-0.text-center.text-white Copyright &copy; Your Website 2021
+    /! Bootstrap core JS
+    script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    /! Core theme JS
+    script src="js/particles.min.js" 
+    script src="js/elm.js" 
+    script src="js/scripts.js" 
+    /! * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    /! * *                               SB Forms JS                               * *
+    /! * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
+    /! * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    script src="https://cdn.startbootstrap.com/sb-forms-latest.js" 

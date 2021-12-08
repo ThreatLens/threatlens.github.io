@@ -12024,100 +12024,6 @@ textarea.form-control-lg {
   color: var(--bs-black);
 }
 
-@font-face {
-  font-family: 'RacingSansOne';
-  src: url("../assets/RacingSansOne-Regular.ttf");
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../assets/Inter.ttf");
-}
-
-@font-face {
-  font-family: 'ITCAvanteGarde';
-  src: url("../assets/ITCAvanteGarde.woff2");
-}
-
-.threat-text {
-  font-family: 'RacingSansOne';
-  font-weight: bold;
-  color: #f01111;
-  text-shadow: 1px 1px 0 #222;
-}
-
-.lens-text {
-  font-family: 'RacingSansOne';
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 0 #222;
-}
-
-.blinking-cursor {
-  display: inline-block;
-  height: 36px;
-  width: 2px;
-  vertical-align: top;
-  /*font-weight: 100;
-  font-size: 30px;*/
-  background-color: white;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-@keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-
-  50% {
-    background-color: white;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-
-  50% {
-    background-color: white;
-  }
-}
-
-@-webkit-keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-
-  50% {
-    background-color: white;
-  }
-}
-
-@-ms-keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-
-  50% {
-    background-color: white;
-  }
-}
-
-@-o-keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-
-  50% {
-    background-color: white;
-  }
-}
-
 .line-1 {
   /*
   font-family: monospace;
@@ -12166,6 +12072,15 @@ textarea.form-control-lg {
   to {
     border-right-color: transparent;
   }
+}
+
+/* Fade out moving dots in title section */
+.fade-block {
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(rgba(40, 40, 40, 0), rgba(40, 40, 40, 1));
+  position: relative;
+  z-index: 4;
 }
 
 .waves {
@@ -12238,32 +12153,81 @@ textarea.form-control-lg {
   }
 }
 
+/* Section of our "Three Step Process" */
+#three-step-process {
+  background-color: #282828;
+  color: #fff;
+}
+
 .tabs {
   text-align: center;
 }
 
-/*#0e549c*/
-
-.tabs .tab-links a {
+/* TODO: Cleanup Tab Section */
+/* Interactive Tabs */
+.tab-links a {
   display: inline-block;
   padding: 0 10px;
   color: #999;
   text-decoration: none;
-  /*font-weight: bolder;*/
   font-size: 1.35em;
   margin: 0 20px;
 }
 
-.tabs .tab-links a.tab-link-selected {
+.tab-links a.tab-link-selected {
   color: #fff;
-  border-bottom: 3px solid #1CA8DD;
-  /*#282828;*/
-  /*2px solid */
+  border-bottom: 2px solid #1CA8DD;
 }
 
-.tabs .tab-contents h3 {
+.tab-contents h3 {
   margin-top: 25px;
   font-size: 1.5em;
+}
+
+/* Simulated Report Demo. Used to illustrate our "Three Step Process" */
+#pseudo-report-demo {
+  display: inline-block;
+  text-align: left;
+  background: #141414;
+  border-radius: 10px;
+  padding: 20px 30px 0 15px;
+  margin-top: 30px;
+  border: 1px solid #383838;
+  box-shadow: inset 0px 0px 4px 2px #282828;
+}
+
+.device-group {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.device-group-title {
+
+}
+
+.dashed-vector {
+  position: relative;
+  height: 300px;
+  width: 400px;
+}
+
+.dashed-vector svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.dashed-vector svg path {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 8, 6;
+}
+
+.device {
+  margin-bottom: 18px;
 }
 
 .device-top-line {
@@ -12281,10 +12245,6 @@ textarea.form-control-lg {
   vertical-align: middle;
 }
 
-.device-rating span {
-  display: inline-block;
-}
-
 .device-name {
   display: inline-block;
   font-size: 1.6em;
@@ -12292,113 +12252,17 @@ textarea.form-control-lg {
   margin-left: 5px;
 }
 
-ul.device-issues {
+ul.device-list {
   margin-left: 45px;
   margin-bottom: 0;
   list-style-type: none;
 }
 
-ul.device-issues .dot {
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
+.device-list-text {
   display: inline-block;
-  margin-right: 10px;
-}
-
-ul.device-issues li span {
   vertical-align: middle;
 }
 
-ul.device-issues li::before {
-  /*content: "";*/
-}
-
-.fade-block {
-  height: 60px;
-  width: 100%;
-  background: linear-gradient(rgba(40, 40, 40, 0), rgba(40, 40, 40, 1));
-  position: relative;
-  z-index: 4;
-}
-
-#features {
-  background-color: #282828;
-  color: #fff;
-}
-
-.example {
-  text-align: center;
-}
-
-.device {
-  display: inline-block;
-  text-align: left;
-  background: #141414;
-  border-radius: 10px;
-  padding: 20px 30px 25px 15px;
-  margin-top: 30px;
-  border: 1px solid #383838;
-  box-shadow: inset 0px 0px 4px 2px #282828;
-}
-
-/*.page-look {
-    background-color: #fff;
-    color: black;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15);
-}*/
-/*
-ul {
-  margin: auto;
-  height: 10px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: block;
-  float: left;
-  width: 10px;
-  height: 10px;
-  margin-right: 20px;
-  border-radius: 100%;
-}*/
-
-/*li:nth-child(-n+5) {
-  background: rgba(255,255,255,1);
-  box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
-                    0px 0px 10px 2px rgba(0,255,135,1);
-}
-
-li:nth-child(n+6) {
-  box-shadow: inset 0px 0px 10px 1px rgba(0,255,182,0.15),
-                    0px 0px 10px rgba(0,255,182,0.1);
-}*/
-
-li.critical-issue .dot {
-  box-shadow: inset 0px 0px 10px 2px #FF5161,
-                      0px 0px 10px 2px rgba(211,3,2,0.1);
-  animation: pulseCritical 0.75s alternate  linear infinite;
-}
-
-@keyframes pulseCritical {
-  0% {
-    background: rgba(255,255,255,0.1);
-    box-shadow: inset 0px 0px 10px 2px #FF5161,
-                      0px 0px 5px 2px rgba(211,3,2,0.1);
-  }
-  100% {
-    background: rgba(255,255,255,1);
-    box-shadow: inset 0px 0px 10px 2px #FF5161,
-                      0px 0px 15px 2.5px rgba(211,3,2,1);
-  }
-}
 
 li.warning-issue .dot {
   box-shadow: inset 0px 0px 8px 3px #ffdb4e,
@@ -12555,4 +12419,24 @@ li.non-issue .dot {
   100% {
     max-height: 45px;
   }
+}
+
+.device-rating {
+		background: url("../assets/cubes.svg");
+		height: 45px;
+		width: 45px;
+		display: inline-block;
+		vertical-align: middle;
+		font-family: Inter;
+		font-size: 2em;
+		text-align: center;
+		font-weight: bold;
+		color: #000;
+}
+/*.device-rating.red-rating */
+.device-rating.yellow-rating {
+		background-position-y: -45px;
+}
+.device-rating.green-rating {
+		background-position-y: -90px;
 }

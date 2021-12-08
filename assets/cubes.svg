@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="135px" width="45px" viewBox="0 0 87 300">
+	<g>
+		<g id="cube-red">
+			<g fill="#e20c0c">
+				<path id="cube-right" d="M 86.3556,75.0882 V 25.1764 L 43.1777,50.1321 V 100"></path>
+			</g>
+			<g fill="#bc0d0d">
+				<path id="cube-left" d="M 0,75.0882 V 25.1764 L 43.1777,50.1321 V 100"></path>
+			</g>
+			<g fill="#ff2424">
+				<path id="cube-top" d="M 86.3556,25.1764 43.1777,0 0,25.1764 43.1777,50.1321 86.3556,25.1764"></path>
+			</g>
+		</g>
+		<g id="cube-yellow">
+			<use x="0" y="100" fill="#bcb916" xlink:href="#cube-right" />
+			<use x="0" y="100" fill="#d3d417" xlink:href="#cube-left" />
+			<use x="0" y="100" fill="#f9f41e" xlink:href="#cube-top" />
+		</g>
+		<g id="cube-green">
+			<use x="0" y="200" fill="#249111" xlink:href="#cube-right" />
+			<use x="0" y="200" fill="#26aa13" xlink:href="#cube-left" />
+			<use x="0" y="200" fill="#3ac022" xlink:href="#cube-top" />
+		</g>
+	</g>
+</svg>

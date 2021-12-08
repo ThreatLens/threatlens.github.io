@@ -1,0 +1,13 @@
+.threat-text {
+  font-family: 'RacingSansOne';
+  font-weight: bold;
+  color: #f01111;
+  text-shadow: 1px 1px 0 #222;
+}
+
+.lens-text {
+  font-family: 'RacingSansOne';
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #222;
+}

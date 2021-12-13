@@ -140,3 +140,10 @@ particlesJS('particles-js',
 );
 
 Elm.Main.init({node: document.getElementById("elm-tabs")});
+
+document.getElementById("contact-us").onclick = function() {
+  document.getElementById("contact-form").classList.add("show-form");
+  document.getElementById("contact-us-container").classList.add("hide-button");
+};
+document.getElementById("contact-form").style.maxHeight = "0px";
+document.getElementById("contact-us").style.display = "inline-block";

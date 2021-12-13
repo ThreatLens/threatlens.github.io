@@ -1,0 +1,4 @@
+- Wrap in static site generator.
+- Add split testing support.
+- Setup Google Analytics and Google Search Console.
+- Lookup SEO tips

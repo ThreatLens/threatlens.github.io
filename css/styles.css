@@ -12154,7 +12154,7 @@ textarea.form-control-lg {
 }
 
 /* Section of our "Three Step Process" */
-#three-step-process {
+.three-step-process {
   background-color: #282828;
   color: #fff;
 }
@@ -12185,24 +12185,24 @@ textarea.form-control-lg {
 }
 
 /* Simulated Report Demo. Used to illustrate our "Three Step Process" */
-#pseudo-report-demo {
+.pseudo-report-demo {
   display: inline-block;
   text-align: left;
   background: #141414;
   border-radius: 10px;
-  padding: 20px 30px 0 15px;
-  margin-top: 30px;
+  padding: 25px 25px 5px;
+  /* padding: 20px 30px 0 15px; */
   border: 1px solid #383838;
   box-shadow: inset 0px 0px 4px 2px #282828;
+}
+
+.report {
+  margin-top: 25px;
 }
 
 .device-group {
   padding: 5px;
   border-radius: 5px;
-}
-
-.device-group-title {
-
 }
 
 .dashed-vector {
@@ -12228,6 +12228,29 @@ textarea.form-control-lg {
 
 .device {
   margin-bottom: 18px;
+  border: 2px dashed transparent;
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+.device-bordered {
+  border: 1px dashed #999;
+  /* padding-top: 10px; */
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.text-top-line {
+  display: block;
+  /* margin-left: 20px; */
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #999;
+}
+
+.text-top {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 1px dashed #999;
 }
 
 .device-top-line {
@@ -12259,7 +12282,7 @@ ul.device-list {
 }
 
 .device-list-text {
-  display: inline-block;
+  display: inline;
   vertical-align: middle;
 }
 
@@ -12440,3 +12463,45 @@ li.non-issue .dot {
 .device-rating.green-rating {
 		background-position-y: -90px;
 }
+
+.justify-text {
+  text-align: justify;
+}
+
+.show-form {
+  animation: reveal-form 1s forwards;
+}
+
+@keyframes reveal-form {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 700px;
+  }
+}
+
+.hide-button {
+  /* overflow: hidden; */
+  /* animation: hide-button 0.75s forwards; */
+  opacity: 0;
+  transform: scaleY(0);
+  height: auto;
+  padding-bottom: 0px !important;
+  transition: opacity 0.75s ease, padding-bottom 0.75s ease 0.75s, transform 0.75s ease 0.75s;
+}
+
+/* @keyframes hide-button {
+  0% {
+    opacity: 1;
+    max-height: 75px;
+  }
+  25% {
+    opacity: 0;
+    max-height: 75px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0px;
+  }
+} */

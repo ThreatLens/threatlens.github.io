@@ -12194,10 +12194,16 @@ textarea.form-control-lg {
   /* padding: 20px 30px 0 15px; */
   border: 1px solid #383838;
   box-shadow: inset 0px 0px 4px 2px #282828;
+  margin-top: 20px;
 }
 
 .report {
   margin-top: 25px;
+  display: none;
+}
+
+.active-tab {
+  display: block !important;
 }
 
 .device-group {
@@ -12505,3 +12511,82 @@ li.non-issue .dot {
     max-height: 0px;
   }
 } */
+
+.success {
+  width: 64px;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+
+.path .circle {
+  -webkit-animation: dash 2s ease-in-out;
+  animation: dash 2s ease-in-out;
+}
+
+.path .line {
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 4.4s ease-in-out forwards;
+  animation: dash 4.4s ease-in-out forwards;
+}
+
+.path .check {
+  stroke-dasharray: 700;
+  animation-delay: 0;
+  -webkit-animation: dash-check 1s ease-in-out forwards;
+  animation: dash-check 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes dash {
+  0% {
+      stroke-dashoffset: 1000;
+  }
+
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes  dash {
+  0% {
+      stroke-dashoffset: 1000;
+  }
+
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  from {
+      stroke-dashoffset: 700;
+  }
+
+  to {
+      stroke-dashoffset: 1400;
+  }
+}
+
+@keyframes  dash-check {
+  from {
+      stroke-dashoffset: 700;
+  }
+
+  to {
+      stroke-dashoffset: 1400;
+  }
+}
+
+#form-success {
+  text-align: center;
+}
+
+#form-fail {
+  text-align: center;
+}
+
+#form-fail-text {
+  color: #F22;
+}

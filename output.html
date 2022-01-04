@@ -30,6 +30,7 @@
 <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-bs-target='#navbarSupportedContent' data-bs-toggle='collapse' type='button'>
 <span class='navbar-toggler-icon'></span>
 </button>
+<!--
 <div class='collapse navbar-collapse' id='navbarSupportedContent'>
 <ul class='navbar-nav ms-auto mb-2 mb-lg-0'>
 <li class='nav-item'>
@@ -46,6 +47,7 @@
 </li>
 </ul>
 </div>
+-->
 </div>
 </nav>
 <!-- Header -->
@@ -74,8 +76,15 @@
 <div class='container px-5'>
 <div class='text-center'>
 <h1 class='fw-bolder'>Our Process</h1>
+<div class='tabs'>
+<div class='tab-links'>
+<a class='tab-link-selected' href='#identify-threats' id='identify-threats-link'>Identify Threats</a>
+<a href='#compare-technologies' id='compare-technologies-link'>Compare Technologies</a>
+<a href='#execute-mitigations' id='execute-mitigations-link'>Execute Mitigations</a>
+</div>
+</div>
 <div class='reports'>
-<div class='report'>
+<div class='report active-tab' id='identify-threats-tab'>
 <h3>Identify Threats</h3>
 <h5>Uncover security holes hiding in your IoT infrastructure.</h5>
 <div class='pseudo-report-demo'>
@@ -101,7 +110,7 @@
 </div>
 </div>
 </div>
-<div class='report'>
+<div class='report' id='compare-technologies-tab'>
 <h3>Compare Technologies</h3>
 <h5>Contrast remedial strategies to lower risk exposure.</h5>
 <div class='pseudo-report-demo'>
@@ -181,7 +190,7 @@ Trusted
 </div>
 </div>
 </div>
-<div class='report'>
+<div class='report' id='execute-mitigations-tab'>
 <h3>Execute Mitigations</h3>
 <h5>Correct your network and device deployments with surgical precision.</h5>
 <div class='pseudo-report-demo'>
@@ -272,16 +281,6 @@ Sandbox
 </div>
 </div>
 </section>
-<section class='three-step-process pt-3 pb-5'>
-<div class='container px-5'>
-<div class='text-center'></div>
-</div>
-</section>
-<section class='three-step-process pt-3 pb-5'>
-<div class='container px-5'>
-<div class='text-center'></div>
-</div>
-</section>
 <!-- Dig Deeper Section -->
 <section class='bg-light py-5 border'>
 <div class='container px-5 my-5'>
@@ -296,7 +295,7 @@ We go beyond the fore and show our customers behind the curtain of todays techno
 </p>
 </div>
 <div class='col-lg-6 col-xl-4'>
-<p>image here</p>
+<img height='300' src='assets/circuit.jpg' style='border-radius: 20px;'>
 </div>
 <!-- Pricing card free -->
 <!--
@@ -458,10 +457,10 @@ Monthly status reports
 <h1 class='fw-bolder'>Discover Defects</h1>
 </div>
 <div class='row gx-5 justify-content-center'>
-<div class='col-lg-6 col-xl-4'>
-<div class='bg-dark' style='height: 240px; width: 320px;'>image here</div>
+<div class='col-xl-5'>
+<img height='275' src='assets/alert.jpg' style='border-radius: 20px;'>
 </div>
-<div class='col-lg-6 col-xl-8 position-relative'>
+<div class='col-lg-6 col-xl-7 position-relative'>
 <p class='lead mb-0 justify-text position-relative top-50 translate-middle-y'>
 Defects are the life blood of cyber exploitation. Put the tools of the trade to work for you and identify the defects in the technologies you trust to shield your organisation from external threats.
 ThreatLens finds threats before they find you.
@@ -476,6 +475,9 @@ ThreatLens finds threats before they find you.
 <h1 class='fw-bolder'>Secure Your Fortress</h1>
 </div>
 <div class='row gx-5 justify-content-center'>
+<div class='col-xl-3'>
+<img height='275' src='assets/secure-fortress.jpg' style='border-radius: 20px;'>
+</div>
 <div class='col-lg-6 col-xl-8 position-relative'>
 <p class='lead mb-0 justify-text position-relative top-50 translate-middle-y'>
 Information is useless if it cannot be acted upon. Fortunately, ThreatLens presents all possible paths forward and provides expert guidance so your business can reify the best solutions to the gaps in your defences.
@@ -535,7 +537,9 @@ Information is useless if it cannot be acted upon. Fortunately, ThreatLens prese
 </div>
 -->
 <h2 class='fw-bolder'>What is your security strategy?</h2>
-<p class='lead mb-0'>Talk to us and we will show you your blind spots.</p>
+<p class='lead mb-0'>
+Talk to us and we will show you your blind spots.
+</p>
 </div>
 <!--
 <div class='text-center' id='contact-us-container'>
@@ -544,38 +548,37 @@ Information is useless if it cannot be acted upon. Fortunately, ThreatLens prese
 -->
 <div class='row gx-5 justify-content-center overflow-hidden'>
 <div class='col-lg-6'>
-<!-- * * * * * * * * * * * * * * * -->
-<!-- * * SB Forms Contact Form * * -->
-<!-- * * * * * * * * * * * * * * * -->
-<!-- This form is pre-integrated with SB Forms. -->
-<!-- To make this form functional, sign up at -->
-<!-- https://startbootstrap.com/solution/contact-forms -->
-<!-- to get an API token! -->
-<form data-sb-form-api-token='API_TOKEN' id='contactForm'>
+<form action='' id='contactForm'>
 <!-- Name input -->
 <div class='form-floating mb-3'>
-<input class='form-control' data-sb-validations='required' id='name' placeholder='Enter your name...' type='text'>
-<label for='name'>Full name</label>
-<div class='invalid-feedback' data-sb-feedback='name:required'>A name is required.</div>
+<input class='form-control' data-sb-validations='required' id='name-field' placeholder='Enter your name...' type='text'>
+<label for='name-field'>Full name</label>
+<div class='invalid-feedback' data-sb-feedback='name-field:required'>A name is required.</div>
+</div>
+<!-- Company input -->
+<div class='form-floating mb-3'>
+<input class='form-control' data-sb-validations='required' id='company-field' placeholder='Enter your company name...' type='text'>
+<label for='company-field'>Company</label>
+<div class='invalid-feedback' data-sb-feedback='company-field:required'>A company is required.</div>
 </div>
 <!-- Email address input -->
 <div class='form-floating mb-3'>
-<input class='form-control' data-sb-validations='required,email' id='email' placeholder='name@example.com' type='email'>
-<label for='email'>Email address</label>
-<div class='invalid-feedback' data-sb-feedback='email:required'>An email is required.</div>
-<div class='invalid-feedback' data-sb-feedback='email:email'>Email is not valid.</div>
+<input class='form-control' data-sb-validations='required,email' id='email-field' placeholder='name@example.com' type='email'>
+<label for='email-field'>Email address</label>
+<div class='invalid-feedback' data-sb-feedback='email-field:required'>An email is required.</div>
+<div class='invalid-feedback' data-sb-feedback='email-field:email'>Email is not valid.</div>
 </div>
 <!-- Phone number input -->
 <div class='form-floating mb-3'>
-<input class='form-control' data-sb-validations='required' id='phone' placeholder='(123) 456-7890' type='tel'>
-<label for='phone'>Phone number</label>
-<div class='invalid-feedback' data-sb-feedback='phone:required'>A phone number is required.</div>
+<input class='form-control' data-sb-validations='required' id='phone-field' placeholder='(123) 456-7890' type='tel'>
+<label for='phone-field'>Phone number</label>
+<div class='invalid-feedback' data-sb-feedback='phone-field:required'>A phone number is required.</div>
 </div>
 <!-- Message input -->
 <div class='form-floating mb-3'>
-<textarea class='form-control' id='message' placeholder='Enter your message here...' style='height: 10rem' type='text'></textarea>
-<label for='message'>Message</label>
-<div class='invalid-feedback' data-sb-feedback='message:required'>A message is required.</div>
+<textarea class='form-control' id='message-field' placeholder='Enter your message here...' style='height: 10rem' type='text'></textarea>
+<label for='message-field'>Message</label>
+<div class='invalid-feedback' data-sb-feedback='message-field:required'>A message is required.</div>
 </div>
 <!-- Submit success message -->
 <!--  -->
@@ -598,9 +601,26 @@ To activate this form, sign up at
 </div>
 <!-- Submit Button -->
 <div class='d-grid'>
-<button class='btn btn-primary btn-lg disabled' id='submitButton' type='submit'>Submit</button>
+<button class='btn btn-primary btn-lg' id='submitButton' type='submit'>Submit</button>
 </div>
 </form>
+<div id='form-success' style='display: none;'>
+<svg class='success' height='70px' version='1.1' viewBox='0 0 70 70' width='70px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g fill-rule='evenodd' fill='none' stroke-width='1' stroke='none'>
+<g stroke-width='4' stroke='#34D183' transform='translate(-1233.000000, -901.000000)'>
+<g class='path circle' transform='translate(1237.000000, 905.000000)'>
+<circle class='path circle' cx='32' cy='32' r='32'></circle>
+<polyline class='path check' points='48 22.7096774 26.6484279 42.3225806 15.483871 31.5557034'></polyline>
+</g>
+</g>
+</g>
+</svg>
+<h3>Thank You!</h3>
+<p>The form was submitted. We'll be in touch.</p>
+</div>
+<div id='form-fail' style='display: none;'>
+<h3 id='form-fail-text'>Form submission failed!</h3>
+</div>
 </div>
 </div>
 </div>
@@ -612,7 +632,6 @@ To activate this form, sign up at
 </div>
 </footer>
 <!-- Bootstrap core JS -->
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'></script>
 <!-- Core theme JS -->
 <script src='js/particles.min.js'></script>
 <script src='js/elm.js'></script>
@@ -621,6 +640,5 @@ To activate this form, sign up at
 <!-- * *                               SB Forms JS                               * * -->
 <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<script src='https://cdn.startbootstrap.com/sb-forms-latest.js'></script>
 </body>
 </html>

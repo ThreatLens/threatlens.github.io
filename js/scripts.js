@@ -139,11 +139,57 @@ particlesJS('particles-js',
 
 );
 
-Elm.Main.init({node: document.getElementById("elm-tabs")});
+// Elm.Main.init({node: document.getElementById("elm-tabs")});
 
-document.getElementById("contact-us").onclick = function() {
-  document.getElementById("contact-form").classList.add("show-form");
-  document.getElementById("contact-us-container").classList.add("hide-button");
-};
-document.getElementById("contact-form").style.maxHeight = "0px";
-document.getElementById("contact-us").style.display = "inline-block";
+// document.getElementById("contact-us").onclick = function() {
+//   document.getElementById("contact-form").classList.add("show-form");
+//   document.getElementById("contact-us-container").classList.add("hide-button");
+// };
+// document.getElementById("contact-form").style.maxHeight = "0px";
+// document.getElementById("contact-us").style.display = "inline-block";
+window.location.hash = '#';
+window.addEventListener('hashchange', function() {
+  var hash = window.location.hash.substring(1);
+  var xs = ['identify-threats', 'compare-technologies', 'execute-mitigations'];
+  if (xs.includes(hash)) {
+    for (var i = 0; i < xs.length; i++) {
+      var tab_id = xs[i] + '-tab';
+      var link_id = xs[i] + '-link';
+      document.getElementById(tab_id).classList.remove('active-tab');
+      document.getElementById(link_id).classList.remove('tab-link-selected');
+    }
+    var tab_id = hash + '-tab';
+    var link_id = hash + '-link';
+    document.getElementById(tab_id).classList.add('active-tab');
+    document.getElementById(link_id).classList.add('tab-link-selected');
+
+  }
+});
+
+var form = document.getElementById("contactForm");
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("submitButton").classList.add("disabled");
+  const formData = new FormData();
+  formData.append('name', document.getElementById("name-field").value);
+  formData.append('company', document.getElementById("company-field").value);
+  formData.append('email', document.getElementById("email-field").value);
+  formData.append('phone', document.getElementById("phone-field").value);
+  formData.append('message', document.getElementById("message-field").value);
+  fetch("https://getform.io/f/613471ca-5e15-4579-bfc8-9c56f1db6ca7", {
+    method: "POST",
+    body: formData
+  })
+  .then(function(response) {
+    console.log(response);
+    if (response.ok) {
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("form-success").style.display = "block";
+    } else {
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("form-fail").style.display = "block";
+      document.getElementById("form-fail-text").innerHTML = response.statusText;
+    }
+  })
+  .catch(error => console.log(error));
+});

@@ -25,19 +25,17 @@
           %a.navbar-brand{:href => "/"}
             %span.threat-text Threat
             %span.lens-text Lens
-          %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
-            %span.navbar-toggler-icon
+          %img{:src => "assets/logo_small.svg", :height => 25}
           /
-            #navbarSupportedContent.collapse.navbar-collapse
-              %ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+            %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+              %span.navbar-toggler-icon
+          #navbarSupportedContent
+            %ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+              /
                 %li.nav-item
                   %a.nav-link.active{"aria-current" => "page", :href => "#!"} Home
-                %li.nav-item
-                  %a.nav-link{:href => "#!"} About
-                %li.nav-item
-                  %a.nav-link{:href => "#!"} Contact
-                %li.nav-item
-                  %a.nav-link{:href => "#!"} Services
+              %li.nav-item
+                %a.nav-link{:href => "#contact"} Contact
       / Header
       %header.pt-5
         .container.px-5
@@ -363,7 +361,7 @@
                       %p.mb-1 The whole team was a huge help with putting things together for our company and brand. We will be hiring them again in the near future for additional work!
                       .small.text-muted - Client Name, Location
     / Contact section
-    %section.bg-light.py-5
+    %section.bg-light.py-5#contact
       .container.px-5.my-5.px-5
         .text-center.mb-5
           /
